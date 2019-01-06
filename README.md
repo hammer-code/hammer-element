@@ -4,9 +4,12 @@
 
 ```bash
 $ yarn
-```
-
-```bash
 $ yarn dev
 ```
+
+open at `localhost:9001`
+
+## Screenshot
+
+![alt text](./screenshot/ss_1.png "SS 1")
 
