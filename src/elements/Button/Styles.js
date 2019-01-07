@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components'
-import { WHITE, PRIMARY } from '../../config/Colors'
+import { WHITE, PRIMARY, BLACK, SECONDARY, RED, GREEN, YELLOW, ORANGE } from '../../config/Colors'
 import { PADDING, ROUNDED, TEXT_SIZE, SHADOW } from '../../config/Metrics'
+
+let COLOR_BASE = PRIMARY
 
 const SMALL = css`
   padding-left: ${PADDING.small};
@@ -54,6 +56,49 @@ const handleSizeContainer = ({ size }) => {
   }
 }
 
+const handleTypeContainer = ({ type }) => {
+  switch (type) {
+    case 'primary':
+      COLOR_BASE = PRIMARY
+      break
+    case 'secondary':
+      COLOR_BASE = SECONDARY
+      break
+    case 'warning':
+      COLOR_BASE = ORANGE
+      break
+    case 'danger':
+      COLOR_BASE = RED
+      break
+    case 'info':
+      COLOR_BASE = YELLOW
+      break
+    case 'success':
+      COLOR_BASE = GREEN
+      break
+    case 'black':
+      COLOR_BASE = BLACK
+      break
+    default:
+      COLOR_BASE = PRIMARY
+      break
+  }
+}
+
+const handleOutlineContainer = ({ outline }) => {
+  if (outline) return css`
+    border: 1px solid ${COLOR_BASE};
+    background-color: ${WHITE};
+    color: ${COLOR_BASE};
+  `
+
+  return css`
+    border: 2px solid ${COLOR_BASE};
+    background-color: ${COLOR_BASE};
+    color: ${WHITE};
+  `
+}
+
 const handleWithShadowContainer = ({ shadow }) => shadow && css`
   box-shadow: ${SHADOW.medium};
 `
@@ -62,14 +107,52 @@ const handleRoundedContainer = ({ rounded }) => rounded && css`
   border-radius: ${ROUNDED.default};
 `
 
+const handleFullWidthContainer = ({ full }) => {
+  if (full) return css`
+    display: block;
+    width: 100%;
+  `
+  return css`
+    display: inline-block;
+  `
+}
+
 export const Container = styled.button`
-  background-color: ${PRIMARY};
-  color: ${WHITE};
   font-weight: 300;
   outline: none;
   border: none;
   cursor: pointer;
+  position: relative;
+  transition: all .3s ease;
+  overflow: hidden;
+  ${handleTypeContainer}
+  ${handleOutlineContainer}
   ${handleSizeContainer}
   ${handleWithShadowContainer}
   ${handleRoundedContainer}
+  ${handleFullWidthContainer}
+
+  &:after {
+    background: #fff;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .2;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+  }
+
+  &:hover {
+    &:after {
+      left: 120%;
+      transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+`
+
+export const WrapperText = styled.span`
+  z-index: 10;
 `

@@ -1,2 +1,2 @@
-import './stories/Screen'
-import './stories/Button'
+import './stories/Screen.story'
+import './stories/Button.story'
