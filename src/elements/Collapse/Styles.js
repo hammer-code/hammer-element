@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { WHITE, PRIMARY, GREY_DARK, GREY_LIGHT, SECONDARY, RED, GREEN, YELLOW, ORANGE } from '../../config/Colors'
+import { WHITE, PRIMARY, BLACK_MYTIC, GREY_LIGHT, SECONDARY, RED, GREEN, YELLOW, ORANGE } from '../../config/Colors'
 import { PADDING, MARGIN, ROUNDED, TEXT_SIZE, SHADOW } from '../../config/Metrics'
 
 const handleExpandContainer = ({ open }) => {
@@ -19,7 +19,7 @@ export const Container = styled.div`
 
 export const Head = styled.div`
   padding: ${PADDING.tiny} ${PADDING.small};
-  color: ${GREY_DARK};
+  color: ${BLACK_MYTIC};
   font-size: ${TEXT_SIZE.medium};
   font-weight: 300;
   display: flex;
