@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { WHITE, PRIMARY, GREY_DARK, GREY_LIGHT, SECONDARY, RED, GREEN, YELLOW, ORANGE } from '../../config/Colors'
-import { PADDING, ROUNDED, TEXT_SIZE, SHADOW } from '../../config/Metrics'
+import { PADDING, MARGIN, ROUNDED, TEXT_SIZE, SHADOW } from '../../config/Metrics'
 
 const handleExpandContainer = ({ open }) => {
   return (open) ? css`
@@ -28,7 +28,6 @@ export const Head = styled.div`
   cursor: pointer;
   touch-callout: none;
   user-select: none;
-  transition: all .3s ease;
   position: relative;
 `
 
@@ -45,7 +44,8 @@ const handleExpandBody = ({ open }) => {
 }
 
 export const Body = styled.div`
-  padding: ${PADDING.tiny} ${PADDING.medium};
+  padding: ${PADDING.tiny} ${PADDING.medium} ${PADDING.medium} ${PADDING.medium};
+  margin-bottom: ${MARGIN.small};
   transition: all .3s ease;
   position: relative;
   ${handleExpandBody}
