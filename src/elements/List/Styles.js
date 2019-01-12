@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { WHITE, PRIMARY_LIGHT, GREY_DARK, GREY_LIGHT, SECONDARY, RED, GREEN, YELLOW, ORANGE } from '../../config/Colors'
+import { WHITE, PRIMARY_LIGHT, BLACK_MYTIC, GREY_LIGHT, SECONDARY, RED, GREEN, YELLOW, ORANGE } from '../../config/Colors'
 import { PADDING, MARGIN, ROUNDED, TEXT_SIZE, SHADOW } from '../../config/Metrics'
 
 export const ListsContainer = styled.ul`
