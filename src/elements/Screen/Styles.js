@@ -8,7 +8,7 @@ export const Container = styled.div`
   background-color: ${GREY_SPACE};
   font-family: 'Helvetica', sans-serif;
   font-size: ${TEXT_SIZE.small};
-  margin: 20px auto;
+  margin: 20px 0 20px 100px;
   box-shadow: ${SHADOW.medium};
 `
 
