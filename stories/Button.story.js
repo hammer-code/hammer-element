@@ -40,59 +40,83 @@ export default storiesOf('Button', module)
     </div>
   </Screen>
 ))
-.add('Rounded', () => (
+.add('Without Rounded', () => (
   <Screen withPadding>
     <div>
-      <Button size="large" rounded>
+      <Button size="large">
         Rounded Button
       </Button>
     </div>
   </Screen>
 ))
-.add('Full Width', () => (
+.add('Full', () => (
   <Screen withPadding>
     <div>
-      <Button size="extraLarge" rounded full>
-        Extra Large Full Button
+      <Button rounded size="small" full>
+        Small Button
+      </Button>
+    </div>
+    <br />
+    <div>
+      <Button rounded size="medium" full>
+        Medium Button
+      </Button>
+    </div>
+    <br />
+    <div>
+      <Button rounded size="large" full>
+        Large Button
+      </Button>
+    </div>
+    <br />
+    <div>
+      <Button rounded size="extraLarge" full>
+        Extra Large Button
       </Button>
     </div>
   </Screen>
 ))
-.add('Type Button', () => (
+.add('Color', () => (
   <Screen withPadding>
     <div>
-      <Button rounded size="medium" type="primary">
-        Type Primary
+      <Button rounded size="medium" color="primary">
+        Primary
       </Button>
     </div>
     <br />
     <div>
-      <Button rounded size="medium" type="secondary">
-        Type Secondary
+      <Button rounded size="medium" color="secondary">
+        Secondary
       </Button>
     </div>
     <br />
     <div>
-      <Button rounded size="medium" type="black">
-        Type Black
+      <Button rounded size="medium" color="black">
+        Black
       </Button>
     </div>
     <br />
     <div>
-      <Button rounded size="medium" type="warning">
-        Type Warning
+      <Button rounded size="medium" color="orange">
+        Orange
       </Button>
     </div>
     <br />
     <div>
-      <Button rounded size="medium" type="danger">
-        Type Danger
+      <Button rounded size="medium" color="yellow">
+        Yellow
       </Button>
     </div>
     <br />
     <div>
-      <Button rounded size="medium" type="success">
-        Type Success
+      <Button rounded size="medium" color="green">
+        Green
+      </Button>
+    </div>
+    <br />
+    <div>
+      <Button rounded size="medium" color="blue">
+        Blue
       </Button>
     </div>
   </Screen>
@@ -100,38 +124,44 @@ export default storiesOf('Button', module)
 .add('Outline', () => (
   <Screen withPadding>
     <div>
-      <Button rounded outline size="medium" type="primary">
-        Type Primary Outline
+      <Button rounded outline size="medium" color="primary">
+        Primary
       </Button>
     </div>
     <br />
     <div>
-      <Button rounded outline size="medium" type="secondary">
-        Type Secondary Outline
+      <Button rounded outline size="medium" color="secondary">
+        Secondary
       </Button>
     </div>
     <br />
     <div>
-      <Button rounded outline size="medium" type="black">
-        Type Black Outline
+      <Button rounded outline size="medium" color="black">
+        Black
       </Button>
     </div>
     <br />
     <div>
-      <Button rounded outline size="medium" type="warning">
-        Type Warning Outline
+      <Button rounded outline size="medium" color="orange">
+        Orange
       </Button>
     </div>
     <br />
     <div>
-      <Button rounded outline size="medium" type="danger">
-        Type Danger Outline
+      <Button rounded outline size="medium" color="yellow">
+        Yellow
       </Button>
     </div>
     <br />
     <div>
-      <Button rounded outline size="medium" type="success">
-        Type Success Outline
+      <Button rounded outline size="medium" color="green">
+        Green
+      </Button>
+    </div>
+    <br />
+    <div>
+      <Button rounded outline size="medium" color="blue">
+        Blue
       </Button>
     </div>
   </Screen>

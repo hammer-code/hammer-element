@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { WHITE, PRIMARY, BLACK, SECONDARY, RED, GREEN, YELLOW, ORANGE, TRANSPARENT } from '../../config/Colors'
+import { WHITE, PRIMARY, BLACK, SECONDARY, RED, BLUE, GREEN, YELLOW, ORANGE, TRANSPARENT } from '../../config/Colors'
 import { PADDING, ROUNDED, TEXT_SIZE, SHADOW } from '../../config/Metrics'
 
 let COLOR_BASE = PRIMARY
@@ -56,24 +56,27 @@ const handleSizeContainer = ({ size }) => {
   }
 }
 
-const handleTypeContainer = ({ type }) => {
-  switch (type) {
+const handleColorContainer = ({ color }) => {
+  switch (color) {
     case 'primary':
       COLOR_BASE = PRIMARY
       break
     case 'secondary':
       COLOR_BASE = SECONDARY
       break
-    case 'warning':
+    case 'orange':
       COLOR_BASE = ORANGE
       break
-    case 'danger':
+    case 'red':
       COLOR_BASE = RED
       break
-    case 'info':
+    case 'blue':
+      COLOR_BASE = BLUE
+      break
+    case 'yellow':
       COLOR_BASE = YELLOW
       break
-    case 'success':
+    case 'green':
       COLOR_BASE = GREEN
       break
     case 'black':
@@ -125,32 +128,12 @@ export const Container = styled.button`
   position: relative;
   transition: all .3s ease;
   overflow: hidden;
-  ${handleTypeContainer}
+  ${handleColorContainer}
   ${handleOutlineContainer}
   ${handleSizeContainer}
   ${handleWithShadowContainer}
   ${handleRoundedContainer}
   ${handleFullWidthContainer}
-
-  &:after {
-    background: #fff;
-    content: "";
-    height: 155px;
-    left: -75px;
-    opacity: .2;
-    position: absolute;
-    top: -50px;
-    transform: rotate(35deg);
-    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
-    width: 50px;
-  }
-
-  &:hover {
-    &:after {
-      left: 120%;
-      transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
-    }
-  }
 `
 
 export const WrapperText = styled.span`

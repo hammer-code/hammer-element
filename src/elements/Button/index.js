@@ -10,14 +10,14 @@ export default class Button extends Component {
       rounded,
       full,
       outline,
-      type } = this.props
+      color } = this.props
     return (
       <Container
         size={size}
         shadow={shadow}
         rounded={rounded}
         full={full}
-        type={type}
+        color={color}
         outline={outline}>
         <WrapperText>
           { children }
@@ -33,5 +33,5 @@ Button.propTypes = {
   runded: PropTypes.bool,
   full: PropTypes.bool,
   outline: PropTypes.bool,
-  type: PropTypes.string
+  color: PropTypes.string
 }
