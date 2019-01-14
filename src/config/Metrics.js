@@ -52,6 +52,7 @@ export const ROUNDED = {
   default: '.25rem',
   small: '.125rem',
   medium: '.5rem',
+  large: '.8rem',
   full: '9999px',
   none: '0'
 }

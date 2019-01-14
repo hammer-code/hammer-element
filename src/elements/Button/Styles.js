@@ -104,7 +104,7 @@ const handleWithShadowContainer = ({ shadow }) => shadow && css`
 `
 
 const handleRoundedContainer = ({ rounded }) => rounded && css`
-  border-radius: ${ROUNDED.default};
+  border-radius: ${ROUNDED.medium};
 `
 
 const handleFullWidthContainer = ({ full }) => {
