@@ -1,4 +1,5 @@
 export const TEXT_SIZE = {
+  extraTiny: '.4375rem',
   tiny: '.625rem',
   small: '.75rem',
   medium: '1rem',
@@ -9,6 +10,7 @@ export const TEXT_SIZE = {
 export const PADDING = {
   remove: '0',
   base: '1px',
+  extraTiny: '0.25rem',
   tiny: '0.5rem',
   small: '0.75rem',
   medium: '1rem',
@@ -19,6 +21,7 @@ export const PADDING = {
 export const MARGIN = {
   remove: '0',
   base: '1px',
+  extraTiny: '0.25rem',
   tiny: '0.5rem',
   small: '0.75rem',
   medium: '1rem',

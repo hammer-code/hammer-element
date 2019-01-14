@@ -1,36 +1,36 @@
 import styled, { css } from 'styled-components'
-import { WHITE, PRIMARY, BLACK, SECONDARY, RED, GREEN, YELLOW, ORANGE } from '../../config/Colors'
+import { WHITE, PRIMARY, BLACK, SECONDARY, RED, GREEN, YELLOW, ORANGE, TRANSPARENT } from '../../config/Colors'
 import { PADDING, ROUNDED, TEXT_SIZE, SHADOW } from '../../config/Metrics'
 
 let COLOR_BASE = PRIMARY
 
 const SMALL = css`
-  padding-left: ${PADDING.small};
-  padding-right: ${PADDING.small};
-  padding-top: ${PADDING.tiny};
-  padding-bottom: ${PADDING.tiny};
+  padding-left: ${PADDING.medium};
+  padding-right: ${PADDING.medium};
+  padding-top: ${PADDING.extraTiny};
+  padding-bottom: ${PADDING.extraTiny};
   font-size: ${TEXT_SIZE.tiny};
 `
 
 const MEDIUM = css`
-  padding-left: ${PADDING.small};
-  padding-right: ${PADDING.small};
+  padding-left: calc(${PADDING.medium} * 2);
+  padding-right: calc(${PADDING.medium} * 2);
   padding-top: ${PADDING.tiny};
   padding-bottom: ${PADDING.tiny};
   font-size: ${TEXT_SIZE.small};
 `
 
 const LARGE = css`
-  padding-left: ${PADDING.medium};
-  padding-right: ${PADDING.medium};
+  padding-left: calc(${PADDING.extraLarge} * 2);
+  padding-right: calc(${PADDING.extraLarge} * 2);
   padding-top: ${PADDING.small};
   padding-bottom: ${PADDING.small};
   font-size: ${TEXT_SIZE.medium};
 `
 
 const EXTRA_LARGE = css`
-  padding-left: ${PADDING.large};
-  padding-right: ${PADDING.large};
+  padding-left: calc(${PADDING.extraLarge} * 2);
+  padding-right: calc(${PADDING.extraLarge} * 2);
   padding-top: ${PADDING.medium};
   padding-bottom: ${PADDING.medium};
   font-size: ${TEXT_SIZE.medium};
@@ -88,7 +88,7 @@ const handleTypeContainer = ({ type }) => {
 const handleOutlineContainer = ({ outline }) => {
   if (outline) return css`
     border: 1px solid ${COLOR_BASE};
-    background-color: ${WHITE};
+    background-color: ${TRANSPARENT};
     color: ${COLOR_BASE};
   `
 

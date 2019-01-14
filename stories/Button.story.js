@@ -7,25 +7,25 @@ export default storiesOf('Button', module)
 .add('Size', () => (
   <Screen withPadding>
     <div>
-      <Button size="small">
+      <Button rounded size="small">
         Small Button
       </Button>
     </div>
     <br />
     <div>
-      <Button size="medium">
+      <Button rounded size="medium">
         Medium Button
       </Button>
     </div>
     <br />
     <div>
-      <Button size="large">
+      <Button rounded size="large">
         Large Button
       </Button>
     </div>
     <br />
     <div>
-      <Button size="extraLarge">
+      <Button rounded size="extraLarge">
         Extra Large Button
       </Button>
     </div>
@@ -34,7 +34,7 @@ export default storiesOf('Button', module)
 .add('Shadow', () => (
   <Screen withPadding>
     <div>
-      <Button size="large" shadow>
+      <Button size="large" rounded shadow>
         Shadow Button
       </Button>
     </div>
