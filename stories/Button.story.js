@@ -166,3 +166,48 @@ export default storiesOf('Button', module)
     </div>
   </Screen>
 ))
+.add('Disabled', () => (
+  <Screen withPadding>
+    <div>
+      <Button rounded size="medium" color="primary" disabled>
+        Primary
+      </Button>
+    </div>
+    <br />
+    <div>
+      <Button rounded size="medium" color="secondary" disabled>
+        Secondary
+      </Button>
+    </div>
+    <br />
+    <div>
+      <Button rounded size="medium" color="black" disabled>
+        Black
+      </Button>
+    </div>
+    <br />
+    <div>
+      <Button rounded size="medium" color="orange" disabled>
+        Orange
+      </Button>
+    </div>
+    <br />
+    <div>
+      <Button rounded size="medium" color="yellow" disabled>
+        Yellow
+      </Button>
+    </div>
+    <br />
+    <div>
+      <Button rounded size="medium" color="green" disabled>
+        Green
+      </Button>
+    </div>
+    <br />
+    <div>
+      <Button rounded size="medium" color="blue" disabled>
+        Blue
+      </Button>
+    </div>
+  </Screen>
+))

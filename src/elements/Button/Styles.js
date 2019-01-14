@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { WHITE, PRIMARY, BLACK, SECONDARY, RED, BLUE, GREEN, YELLOW, ORANGE, TRANSPARENT } from '../../config/Colors'
+import { WHITE, GREY_LIGHT, PRIMARY, BLACK, SECONDARY, RED, BLUE, GREEN, YELLOW, ORANGE, TRANSPARENT } from '../../config/Colors'
 import { PADDING, ROUNDED, TEXT_SIZE, SHADOW } from '../../config/Metrics'
 
 let COLOR_BASE = PRIMARY
@@ -96,7 +96,7 @@ const handleOutlineContainer = ({ outline }) => {
   `
 
   return css`
-    border: 2px solid ${COLOR_BASE};
+    border: 1px solid ${COLOR_BASE};
     background-color: ${COLOR_BASE};
     color: ${WHITE};
   `
@@ -120,6 +120,14 @@ const handleFullWidthContainer = ({ full }) => {
   `
 }
 
+const handleDisabledContainer = ({ disabled }) => {
+  if (disabled) return css`
+    cursor: no-drop;
+    background-color: ${GREY_LIGHT};
+    border: 1px solid ${GREY_LIGHT};
+  `
+}
+
 export const Container = styled.button`
   font-weight: 300;
   outline: none;
@@ -134,6 +142,7 @@ export const Container = styled.button`
   ${handleWithShadowContainer}
   ${handleRoundedContainer}
   ${handleFullWidthContainer}
+  ${handleDisabledContainer}
 `
 
 export const WrapperText = styled.span`
